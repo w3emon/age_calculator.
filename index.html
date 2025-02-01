@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Age Calculator</h1>
+      <form id="ageForm">
+        <label for="dob">Date of Birth (mm/dd/yyyy):</label>
+        <input type="date" id="dob" name="dob" required />
+        <button type="submit">Calculate</button>
+      </form>
+      <div id="result">
+        <p><span id="years">0</span> Years</p>
+        <p><span id="months">0</span> Months</p>
+        <p><span id="days">0</span> Days</p>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
