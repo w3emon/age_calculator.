@@ -1,4 +1,10 @@
 /* ///////// */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -10,7 +16,7 @@ body {
 }
 
 .container {
-  background-color:aqua;
+  background-color: aqua;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -40,6 +46,8 @@ input[type="date"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
+  color: black;
+  width: 100%;
 }
 
 button {
@@ -113,9 +121,6 @@ button:hover {
 
 /* Medium Devices (Tablets) */
 @media (min-width: 768px) and (max-width: 991px) {
-
-  
-
   h1 {
     font-size: 2rem;
   }
@@ -142,7 +147,6 @@ button:hover {
   h1 {
     font-size: 2.2rem;
   }
-  
 
   label {
     font-size: 1.3rem;
