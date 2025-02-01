@@ -37,3 +37,43 @@ document.getElementById("ageForm").addEventListener("submit", function (event) {
   document.getElementById("months").textContent = ageMonths;
   document.getElementById("days").textContent = ageDays;
 });
+
+const submit = document.querySelector("#submit");
+const result = document.querySelector("#result");
+const container = document.querySelector(".container");
+
+// Check if the date is valid
+
+submit.addEventListener("click", () => {
+  if (dobInput.value == "") {
+    result.style.opacity = "0";
+    container.style.height = "255px";
+    result.style.transition = "0ms";
+  } else {
+    submit.textContent = "Calculating...";
+    result.style.transition = "0ms";
+    result.style.opacity = "0";
+    container.style.height = "255px";
+
+    setTimeout(() => {
+      submit.textContent = "Calculate";
+      // result.style.display = "block";
+      container.style.height = "380px";
+      result.style.transition = "1500ms";
+
+      result.style.opacity = "1";
+    }, 500);
+  }
+});
+
+const dobInput = document.getElementById("dob");
+const dob = new Date(dobInput);
+
+dobInput.addEventListener("change", (e) => {
+  if (e.target.value == "" || isNaN(dob.getTime())) {
+    console.log(e.target.value);
+    result.style.opacity = "0";
+    container.style.height = "255px";
+    result.style.transition = "0ms";
+  }
+});
